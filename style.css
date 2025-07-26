@@ -44,7 +44,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 5rem;
     margin-inline: auto;
 }
 
@@ -57,9 +57,10 @@ img {
 }
 
 h1{
-    width: 8ch;
+    width: 10ch;
     word-wrap: break-word;
     letter-spacing: 1rem;
+    font-size: 1.5rem;
 }
 
 .wrapper {
