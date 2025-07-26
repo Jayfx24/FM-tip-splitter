@@ -50,20 +50,10 @@ btns.forEach((btn) => {
 
 const handleClick = (e) => {
   e.preventDefault();
-
-  if (billInput.value === "" && peopleCount.value === "" && clickedBtn === null)
-    resetBtn.disabled = true;
-  else {
-    resetBtn.disabled = false;
-  }
-  if (e.target.classList.contains("tip__custom"))
-    btns.forEach((el) => el.classList.remove("active"));
-  if (e.target.id === "bill") {
-    e.target.closest(".input-wrapper").classList.add("active-inp");
-  } else billInput.closest(".input-wrapper").classList.remove("active-inp");
+  const target = e.target;
+  utils(target);
 
   const formData = new FormData(form);
-
   if (clickedBtn && formData.get("tip") === "")
     formData.append("tip", clickedBtn.value);
   const data = Object.fromEntries(formData);
@@ -89,8 +79,26 @@ const handlePeopleCount = (e) => {
   }
   error.innerHTML = " ";
   wrapper.classList.remove("input-err");
+  wrapper.classList.add("active-inp");
 
   handleClick(e);
+};
+
+const utils = (target) => {
+  if (billInput.value === "" && peopleCount.value === "" && clickedBtn === null)
+    resetBtn.disabled = true;
+  else {
+    resetBtn.disabled = false;
+  }
+  if (target.classList.contains("tip__custom")) {
+    btns.forEach((el) => el.classList.remove("active"));
+    target.classList.add("active-inp");
+  }else customTip.classList.remove('active-inp')
+  if (target.id === "bill") {
+    target.closest(".input-wrapper").classList.add("active-inp");
+  } else billInput.closest(".input-wrapper").classList.remove("active-inp");
+  if(target.id !== 'people')
+  peopleCount.closest(".input-wrapper").classList.remove("active-inp");
 };
 resetBtn.disabled = true;
 form.reset();
