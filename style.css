@@ -225,6 +225,11 @@ input[type=number] {
 .active, #reset:hover{
     background-color: var(--Green-200);
 }
+
+.active-inp,.input-wrapper:focus-visible{
+    border: 1px solid var(--Green-400);
+    outline: 1px solid var(--Green-400);
+}
 .tip__info{
     display: flex;
     justify-content: space-between;

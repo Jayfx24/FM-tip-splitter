@@ -44,11 +44,9 @@ btns.forEach((btn) => {
       clickedBtn = e.target;
       clickedBtn.classList.add("active");
       customTip.value = "";
-
     }
   });
 });
-
 
 const handleClick = (e) => {
   e.preventDefault();
@@ -58,7 +56,11 @@ const handleClick = (e) => {
   else {
     resetBtn.disabled = false;
   }
-    if (e.target.classList.contains('tip__custom'))  btns.forEach((el) => el.classList.remove("active"));
+  if (e.target.classList.contains("tip__custom"))
+    btns.forEach((el) => el.classList.remove("active"));
+  if (e.target.id === "bill") {
+    e.target.closest(".input-wrapper").classList.add("active-inp");
+  } else billInput.closest(".input-wrapper").classList.remove("active-inp");
 
   const formData = new FormData(form);
 
@@ -91,7 +93,7 @@ const handlePeopleCount = (e) => {
   handleClick(e);
 };
 resetBtn.disabled = true;
-form.reset()
+form.reset();
 peopleCount.addEventListener("input", handlePeopleCount);
 form.addEventListener("submit", handleClick);
 customTip.addEventListener("input", handleClick);
