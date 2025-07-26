@@ -39,12 +39,14 @@ body {
 }
 
 main {
-    min-height: 100vh;
+   height: 100%;
+   /* min-height: 800vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 5rem;
+    /* padding: 5rem; */
     margin-inline: auto;
 }
 
@@ -66,11 +68,12 @@ h1{
 .wrapper {
     display: flex;
     background-color: white;
-    padding: 2rem;
-    gap: 2rem;
+    padding: 3rem;
+    gap: 3rem;
     border-radius: 1.5rem;
     width: 80%;
-    max-width:920px
+    max-width:920px;
+    
 }
 
 .wrapper>* {
@@ -182,6 +185,8 @@ input[type=number] {
 .tip__btn:hover {
     background-color: var(--Green-400);
     color: var(--Green-900);
+    border: 1px solid var(--Green-400);
+    outline: 1px solid var(--Green-400);
 }
 
 .tip__custom:focus {
