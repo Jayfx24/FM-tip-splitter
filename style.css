@@ -69,7 +69,7 @@ h1{
 .wrapper {
     display: flex;
     background-color: white;
-    padding: 3rem;
+    padding: 2rem;
     gap: 3rem;
     border-radius: 1.5rem;
     width: 70%;
