@@ -18,15 +18,17 @@
   </head>
   <body>
     <main>
+      <header></header>
+      <h1>SPLITTER</h1>
       <section class="wrapper">
-        <form action="">
+        <form id="tipForm">
           <div class="form-group">
-            <label for="billAmount">Bill</label>
+            <label for="bill">Bill</label>
             <div class="input-wrapper">
               <input
                 type="number"
-                name="billAmount"
-                id="billAmount"
+                name="bill"
+                id="bill"
                 class="form__input"
                 min="0"
                 step="0.1"
@@ -41,26 +43,26 @@
             <p class="">Select Tip %</p>
             <div class="btn-group">
               <ul>
-                <li><button type="submit" class="tip__btn" name="tipPercent" value="5">5%</button></li>
-                <li><button type="submit" class="tip__btn" name="tipPercent" value="10">10%</button></li>
-                <li><button type="submit" class="tip__btn" name="tipPercent" value="15">15%</button></li>
-                <li><button type="submit" class="tip__btn" name="tipPercent" value="25">25%</button></li>
-                <li><button type="submit" class="tip__btn" name="tipPercent" value="50">50%</button></li>
+                <li><button type="submit" class="tip__btn" name="tip" value="5">5%</button></li>
+                <li><button type="submit" class="tip__btn" name="tip" value="10">10%</button></li>
+                <li><button type="submit" class="tip__btn" name="tip" value="15">15%</button></li>
+                <li><button type="submit" class="tip__btn" name="tip" value="25">25%</button></li>
+                <li><button type="submit" class="tip__btn" name="tip" value="50">50%</button></li>
                 <li>
                   <input
                     type="number"
                     class="tip__custom"
-                    class="form__input"
                     placeholder="Custom"
+                    name="tip"
                   />
                 </li>
               </ul>
             </div>
           </div>
           <div class="form-group">
-            <label for="peopleCount">Number of People</label>
+            <label for="people">Number of People</label>
             <div class="input-wrapper">
-              <input type="number" name="peopleCount" id="peopleCount" />
+              <input type="number" name="people" id="people" placeholder="0"/>
               <span class="input__icon"><img src="./images/icon-person.svg" alt="People icon" srcset=""></span>
     
             </div>
@@ -72,31 +74,31 @@
           <div class="tip__infos">
             <div class="tip__info">
               <div class="tip__info__text">
-                <p>Tip Amount</p>
-                <p>/ person</p>
+                <p class="info__amount">Tip Amount</p>
+                <p class="info__type">/ person</p>
               </div>
-              <p class="tip__info__amount"></p>
+              <p class="tip__info__amount tip__per__person">$0.00</p>
             </div>
             <div class="tip__info">
               <div class="tip__info__text">
-                <p>Total</p>
-                <p>/ person</p>
+                <p class="info__amount">Total</p>
+                <p class="info__type">/ person</p>
               </div>
-              <p class="tip__info__amount"></p>
+              <p class="tip__info__amount total__per__person">$0.00</p>
             </div>
           </div>
-          <button type="reset" >Reset</button>
+          <button type="reset" id="reset">Reset</button>
         </div>
 
       </section>
     </main>
 
-    <div class="attribution">
-      Challenge by
+    <footer class="attribution">
+       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
-    <script src="index.js"></script>
+      >. Coded by <a href="https://www.frontendmentor.io/profile/Jayfx24">Jayfx24</a>.
+    </footer>
+    <script src="index.js" defer></script>
   </body>
 </html>
