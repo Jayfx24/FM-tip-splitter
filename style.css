@@ -48,6 +48,7 @@ main {
     gap: 5rem;
     /* padding: 5rem; */
     margin-inline: auto;
+    margin-top: -3rem;
 }
 
 li {
@@ -290,6 +291,10 @@ input[type=number] {
 
     .tip__info__amount{
         font-size: 2.5rem;
+    }
+
+     main{
+        margin: 0;
     }
 }
 
